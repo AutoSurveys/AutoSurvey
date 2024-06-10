@@ -1,0 +1,12 @@
+faiss_gpu==1.7.2
+gradio==4.36.1
+h5py==3.7.0
+langchain==0.2.3
+numpy==1.23.5
+Requests==2.32.3
+sentence_transformers==2.7.0
+tiktoken==0.7.0
+tinydb==4.8.0
+torch==2.3.0
+tqdm==4.66.4
+transformers==4.35.1
