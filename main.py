@@ -28,14 +28,14 @@ def write(topic, model, section_num, subsection_len, rag_num, refinement):
         raw_survey, raw_survey_with_references, raw_references = write_subsection(topic, model, outline, subsection_len = subsection_len, rag_num = rag_num, refinement = False)
         return raw_survey_with_references
 
-def write_outline(topic, model, section_num, db, api_key):
-    outline_writer = outlineWriter(model=model, api_key=api_key, database=db)
+def write_outline(topic, model, section_num, db, api_key, api_url):
+    outline_writer = outlineWriter(model=model, api_key=api_key, api_url = api_url, database=db)
     outline = outline_writer.draft_outline(topic, 1500, 30000, section_num)
     return outline, remove_descriptions(outline)
 
-def write_subsection(topic, model, outline, subsection_len, rag_num, db, api_key, refinement = True):
+def write_subsection(topic, model, outline, subsection_len, rag_num, db, api_key, api_url, refinement = True):
 
-    subsection_writer = subsectionWriter(model=model, api_key=api_key, database=db)
+    subsection_writer = subsectionWriter(model=model, api_key=api_key, api_url = api_url, database=db)
     if refinement:
         raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references = subsection_writer.write(topic, outline, subsection_len = subsection_len, rag_num = rag_num, refining = True)
         return raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references
@@ -52,6 +52,7 @@ def paras_args():
     parser.add_argument('--section_num',default=7, type=int, help='')
     parser.add_argument('--subsection_len',default=700, type=int, help='')
     parser.add_argument('--rag_num',default=60, type=str, help='')
+    parser.add_argument('--api_url',default='', type=str, help='')
     parser.add_argument('--api_key',default='', type=str, help='')
     parser.add_argument('--db_path',default='../database', type=str, help='')
     parser.add_argument('--embedding_model',default='../model/nomic-embed-text-v1', type=str, help='')
@@ -67,9 +68,9 @@ def main(args):
     if not os.path.exists(args.saving_path):
         os.mkdir(args.saving_path)
 
-    outline_with_description, outline_wo_description = write_outline(args.topic, args.model, args.section_num, db, args.api_key)
+    outline_with_description, outline_wo_description = write_outline(args.topic, args.model, args.section_num, db, args.api_key, args.api_url)
 
-    raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references = write_subsection(args.topic, args.model, outline_with_description, args.subsection_len, args.rag_num, db, args.api_key)
+    raw_survey, raw_survey_with_references, raw_references, refined_survey, refined_survey_with_references, refined_references = write_subsection(args.topic, args.model, outline_with_description, args.subsection_len, args.rag_num, db, args.api_key, args.api_url)
 
     with open(f'{args.saving_path}/{args.topic}.md', 'a+') as f:
         f.write(refined_survey_with_references)

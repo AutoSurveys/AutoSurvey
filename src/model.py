@@ -6,13 +6,13 @@ import threading
 
 class APIModel:
 
-    def __init__(self, model, api_key) -> None:
+    def __init__(self, model, api_key, api_url) -> None:
         self.__api_key = api_key
+        self.__api_url = api_url
         self.model = model
         
     def __req(self, text, temperature, max_try = 5):
-        # fill the url
-        url = "xxxx"
+        url = f"{self.__api_url}"
         pay_load_dict = {"model": f"{self.model}","messages": [{
                 "role": "user",
                 "temperature":temperature,

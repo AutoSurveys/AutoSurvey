@@ -33,10 +33,10 @@ CRITERIA = {'Coverage':{'description':'Coverage: Coverage assesses the extent to
                                     to a comprehensive understanding of the topic.',}}
 
 class Judge():
-    def __init__(self, model:str, api_key:str, database = None) -> None:
+    def __init__(self, model:str, api_key:str, api_url:str, database = None) -> None:
 
-        self.model, self.api_key = model, api_key 
-        self.api_model = APIModel(self.model, self.api_key)
+        self.model, self.api_key, self.api_url = model, api_key, api_url 
+        self.api_model = APIModel(self.model, self.api_key, self.api_url)
         self.db = database
 
         self.token_counter = tokenCounter()

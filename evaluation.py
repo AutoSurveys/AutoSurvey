@@ -17,6 +17,7 @@ def paras_args():
     parser.add_argument('--saving_path',default='./output/', type=str, help='')
     parser.add_argument('--model',default='claude-3-haiku-20240307', type=str, help='')
     parser.add_argument('--topic',default='', type=str, help='')
+    parser.add_argument('--api_url',default='', type=str, help='')
     parser.add_argument('--api_key',default='', type=str, help='')
     parser.add_argument('--db_path',default='../database', type=str, help='')
     parser.add_argument('--embedding_model',default='../model/nomic-embed-text-v1', type=str, help='')

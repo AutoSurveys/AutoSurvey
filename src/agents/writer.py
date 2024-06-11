@@ -15,10 +15,10 @@ from transformers import AutoModel, AutoTokenizer,  AutoModelForSequenceClassifi
 
 class subsectionWriter():
     
-    def __init__(self, model:str, api_key:str, database) -> None:
+    def __init__(self, model:str, api_key:str, api_url:str,  database) -> None:
         
-        self.model, self.api_key = model, api_key 
-        self.api_model = APIModel(self.model, self.api_key)
+        self.model, self.api_key, self.api_url = model, api_key, api_url
+        self.api_model = APIModel(self.model, self.api_key, self.api_url)
 
         self.db = database
         self.token_counter = tokenCounter()

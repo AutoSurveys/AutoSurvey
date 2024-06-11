@@ -1,18 +1,23 @@
-# Project Name
+# AutoSurvey
+<p align="center">
+   AutoSurvey: Large Language Models Can Automatically Write Surveys
+</p>
+<p align="center">
+  <strong></strong><br>
+  Yidong Wang<sup>1,2∗</sup>, Qi Guo<sup>2,3∗</sup>, Wenjin Yao<sup>2</sup>, Hongbo Zhang<sup>1</sup>, Xin Zhang<sup>4</sup>, Zhen Wu<sup>3</sup>, Meishan Zhang<sup>4</sup>, Xinyu Dai<sup>3</sup>, Min Zhang<sup>4</sup>, Qingsong Wen<sup>5</sup>, Wei Ye<sup>2†</sup>, Shikun Zhang<sup>2†</sup>, Yue Zhang<sup>1†</sup>
+  <br><br>
+  <strong></strong><br>
+  <sup>1</sup>Westlake University, <sup>2</sup>Peking University, <sup>3</sup>Nanjing University, <sup>4</sup>Harbin Institute of Technology, Shenzhen, <sup>5</sup>Squirrel AI
+</p>
 
-This project is designed to generate detailed outlines and subsections on a given topic using an AI model. The generated content can be refined for better accuracy and completeness. The project uses Gradio for the GUI and can be run both with and without a graphical interface.
 
-## Features
+## Introduction
 
-- Generates outlines based on a given topic.
-- Writes detailed subsections for each outline section.
-- Option to refine the generated content.
-- Utilizes Gradio for a user-friendly graphical interface.
-- Supports command-line interface for automation.
+AutoSurvey is a speedy and well-organized framework for automating the creation of comprehensive literature surveys.
 
 ## Requirements
 
-- Python 3.x
+- Python 3.10.x
 - Required Python packages listed in `requirements.txt`
 
 ## Installation
@@ -28,6 +33,11 @@ This project is designed to generate detailed outlines and subsections on a give
    pip install -r requirements.txt
    ```
 
+3. Download the database:
+   ```sh
+   pip install -r requirements.txt
+   ```
+onedrive
 ## Usage
 
 ### Command Line Interface (CLI)
@@ -41,7 +51,7 @@ python main.py --topic "Your Topic" --api_key "Your_API_Key"
 You can customize the arguments as needed:
 
 - `--gpu`: Specify the GPU to use (default: '0').
-- `--saving_path`: Directory to save the output (default: './output/').
+- `--saving_path`: Directory to save the output survey (default: './output/').
 - `--model`: Model to use (default: 'claude-3-haiku-20240307').
 - `--topic`: Topic to generate content for.
 - `--section_num`: Number of sections in the outline (default: 7).
@@ -65,28 +75,18 @@ This will launch a Gradio interface where you can input your topic and other par
 Here is an example command to generate content on the topic "Artificial Intelligence":
 
 ```sh
-python main.py --topic "Artificial Intelligence" --api_key "Your_API_Key"
+python main.py --topic "In-context Learning" 
+               --gpu 0
+               --saving_path ./output/
+               --model claude-3-haiku-20240307
+               --section_num 7
+               --subsection_len 700
+               --rag_num 60
+               --gui 0
+               --api_key sk-xxxxxx 
 ```
 
 The generated content will be saved in the `./output/` directory.
-
-## Functions
-
-### `remove_descriptions(text)`
-
-Removes lines starting with "Description" from the given text.
-
-### `write(topic, model, section_num, subsection_len, rag_num, refinement)`
-
-Generates the outline and subsections for the given topic.
-
-### `write_outline(topic, model, section_num)`
-
-Generates the outline for the given topic.
-
-### `write_subsection(topic, model, outline, subsection_len, rag_num, refinement)`
-
-Generates subsections for the given outline.
 
 ## Contributing
 
@@ -98,10 +98,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- [TQDM](https://github.com/tqdm/tqdm) for progress bars.
 - [Gradio](https://gradio.app) for the user interface.
 - [OpenAI](https://www.openai.com) for the AI model.
-
----
-
-Feel free to customize this README file according to your project's specific details and requirements.
