@@ -9,7 +9,9 @@
   <strong></strong><br>
   <sup>1</sup>Westlake University, <sup>2</sup>Peking University, <sup>3</sup>Nanjing University, <sup>4</sup>Harbin Institute of Technology, Shenzhen, <sup>5</sup>Squirrel AI
 </p>
-
+<p align="center">
+  <embed src="figs/survey_pic.pdf" width="800px" height="600px" />
+</p>
 
 ## Introduction
 
