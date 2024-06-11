@@ -33,12 +33,10 @@ def evaluate(args):
 
     db = database(db_path = args.db_path, embedding_model = args.embedding_model)
 
-    api_key = args.api_key
-
     if not os.path.exists(args.saving_path):
         os.mkdir(args.saving_path)
 
-    judge = Judge(args.model, args.api_key, db)
+    judge = Judge(args.model, args.api_key, args.api_url, db)
 
     survey, references = read_survey(args.saving_path, args.topic)
 
@@ -49,10 +47,10 @@ def evaluate(args):
     recall, precision = judge.citation_quality(survey, references)
 
     with open(f'{args.saving_path}/{args.topic}_evaluation.txt', 'a+') as f:
-        result = ''
+        result = f'Judged by {args.model}:\n'
         for c, s in zip(criterion, scores):
             result += f'{c} = {s}\n'
-        result += f'Citation Recall = {recall}\nCitation Precision = {precision}\n'
+        result += f'Citation Recall = {recall:.4f}\nCitation Precision = {precision:.4f}\n'
         f.write(result)
 
 if __name__ == '__main__':

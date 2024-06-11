@@ -15,7 +15,7 @@ class database():
     def __init__(self, db_path, embedding_model) -> None:
         
         self.embedding_model = SentenceTransformer(embedding_model, trust_remote_code=True)
-        # self.embedding_model = SentenceTransformer("/home/gq/model/nomic-embed-text-v1", trust_remote_code=True)
+
         self.embedding_model.to(torch.device('cuda'))
 
         self.db = TinyDB(f'{db_path}/arxiv_paper_db.json')

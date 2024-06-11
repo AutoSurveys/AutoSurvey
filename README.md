@@ -9,9 +9,8 @@
   <strong></strong><br>
   <sup>1</sup>Westlake University, <sup>2</sup>Peking University, <sup>3</sup>Nanjing University, <sup>4</sup>Harbin Institute of Technology, Shenzhen, <sup>5</sup>Squirrel AI
 </p>
-<p align="center">
-  <embed src="figs/survey_pic.pdf" width="800px" height="600px" />
-</p>
+
+![Overview](figs/survey_pic.pdf)
 
 ## Introduction
 
@@ -39,42 +38,11 @@ AutoSurvey is a speedy and well-organized framework for automating the creation 
    ```sh
    pip install -r requirements.txt
    ```
-onedrive
+
 ## Usage
 
-### Command Line Interface (CLI)
-
-To use the project via the command line, run the following command:
-
-```sh
-python main.py --topic "Your Topic" --api_key "Your_API_Key"
-```
-
-You can customize the arguments as needed:
-
-- `--gpu`: Specify the GPU to use (default: '0').
-- `--saving_path`: Directory to save the output survey (default: './output/').
-- `--model`: Model to use (default: 'claude-3-haiku-20240307').
-- `--topic`: Topic to generate content for.
-- `--section_num`: Number of sections in the outline (default: 7).
-- `--subsection_len`: Length of each subsection (default: 700).
-- `--rag_num`: Number of references to use for RAG (default: 60).
-- `--gui`: Whether to use the graphical interface (default: 0 for no, 1 for yes).
-- `--api_key`: API key for the model.
-
-### Graphical Interface (GUI)
-
-To use the project with a graphical interface, set the `--gui` argument to 1:
-
-```sh
-python main.py --topic "Your Topic" --api_key "Your_API_Key" --gui 1
-```
-
-This will launch a Gradio interface where you can input your topic and other parameters.
-
-## Example
-
-Here is an example command to generate content on the topic "Artificial Intelligence":
+### Generation
+Here is an example command to generate content on the topic "In-context Learning":
 
 ```sh
 python main.py --topic "In-context Learning" 
@@ -90,6 +58,46 @@ python main.py --topic "In-context Learning"
 
 The generated content will be saved in the `./output/` directory.
 
+You can customize the arguments as needed:
+
+- `--gpu`: Specify the GPU to use (default: '0').
+- `--saving_path`: Directory to save the output survey (default: './output/').
+- `--model`: Model to use (default: 'claude-3-haiku-20240307').
+- `--topic`: Topic to generate content for.
+- `--section_num`: Number of sections in the outline (default: 7).
+- `--subsection_len`: Length of each subsection (default: 700).
+- `--rag_num`: Number of references to use for RAG (default: 60).
+- `--gui`: Whether to use the graphical interface (default: 0 for no, 1 for yes).
+- `--api_key`: API key for the model.
+- `--api_url`: API key for the model.
+
+### Evaluation
+
+Here is an example command to evaluate the generated survey on the topic "In-context Learning":
+
+```sh
+python main.py --topic "In-context Learning" 
+               --gpu 0
+               --saving_path ./output/
+               --model claude-3-haiku-20240307
+               --section_num 7
+               --subsection_len 700
+               --rag_num 60
+               --gui 0
+               --api_key sk-xxxxxx 
+```
+
+Make sure the generated survey is in the `./output/` directory
+
+The evaluation result will be saved in the `./output/` directory.
+
+- `--gpu`: Specify the GPU to use (default: '0').
+- `--saving_path`: Directory to save the evaluation results (default: './output/').
+- `--model`: Model to evaluate (default: 'claude-3-haiku-20240307').
+- `--topic`: Topic to generate content for.
+- `--api_key`: API key for the model.
+- `--api_url`: API key for the model.
+
 ## Contributing
 
 Contributions are welcome! Please submit a pull request or open an issue to discuss what you would like to change.
@@ -97,8 +105,3 @@ Contributions are welcome! Please submit a pull request or open an issue to disc
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Gradio](https://gradio.app) for the user interface.
-- [OpenAI](https://www.openai.com) for the AI model.
