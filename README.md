@@ -10,11 +10,12 @@
   <sup>1</sup>Westlake University, <sup>2</sup>Peking University, <sup>3</sup>Nanjing University, <sup>4</sup>Harbin Institute of Technology, Shenzhen, <sup>5</sup>Squirrel AI
 </p>
 
-![Overview](figs/survey_pic.pdf)
-
 ## Introduction
 
 AutoSurvey is a speedy and well-organized framework for automating the creation of comprehensive literature surveys.
+
+![Overview](figs/overview.png)
+![Overview](figs/main_fig.png)
 
 ## Requirements
 
@@ -25,8 +26,8 @@ AutoSurvey is a speedy and well-organized framework for automating the creation 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/AutoSurveys/AutoSurvey.git
+   cd AutoSurvey
    ```
 
 2. Install the required packages:
@@ -34,7 +35,7 @@ AutoSurvey is a speedy and well-organized framework for automating the creation 
    pip install -r requirements.txt
    ```
 
-3. Download the database:
+3. Download the database (We provide a database containing 53,000 arXiv paper abstracts and all papers are under the CS category.):
    ```sh
    pip install -r requirements.txt
    ```
@@ -42,17 +43,17 @@ AutoSurvey is a speedy and well-organized framework for automating the creation 
 ## Usage
 
 ### Generation
-Here is an example command to generate content on the topic "In-context Learning":
+Here is an example command to generate survey on the topic "In-context Learning":
 
 ```sh
 python main.py --topic "In-context Learning" 
                --gpu 0
                --saving_path ./output/
-               --model claude-3-haiku-20240307
+               --model gpt-4-0125-preview
                --section_num 7
                --subsection_len 700
                --rag_num 60
-               --gui 0
+               --api_url https://api.openai.com/v1/chat/completions
                --api_key sk-xxxxxx 
 ```
 
@@ -60,16 +61,15 @@ The generated content will be saved in the `./output/` directory.
 
 You can customize the arguments as needed:
 
-- `--gpu`: Specify the GPU to use (default: '0').
-- `--saving_path`: Directory to save the output survey (default: './output/').
-- `--model`: Model to use (default: 'claude-3-haiku-20240307').
+- `--gpu`: Specify the GPU to use.
+- `--saving_path`: Directory to save the output survey.
+- `--model`: Model to use.
 - `--topic`: Topic to generate content for.
-- `--section_num`: Number of sections in the outline (default: 7).
-- `--subsection_len`: Length of each subsection (default: 700).
-- `--rag_num`: Number of references to use for RAG (default: 60).
-- `--gui`: Whether to use the graphical interface (default: 0 for no, 1 for yes).
+- `--section_num`: Number of sections in the outline.
+- `--subsection_len`: Length of each subsection.
+- `--rag_num`: Number of references to use for RAG.
 - `--api_key`: API key for the model.
-- `--api_url`: API key for the model.
+- `--api_url`: url for API request.
 
 ### Evaluation
 
@@ -80,10 +80,7 @@ python main.py --topic "In-context Learning"
                --gpu 0
                --saving_path ./output/
                --model claude-3-haiku-20240307
-               --section_num 7
-               --subsection_len 700
-               --rag_num 60
-               --gui 0
+               --api_url xxxx
                --api_key sk-xxxxxx 
 ```
 
@@ -93,7 +90,7 @@ The evaluation result will be saved in the `./output/` directory.
 
 - `--gpu`: Specify the GPU to use (default: '0').
 - `--saving_path`: Directory to save the evaluation results (default: './output/').
-- `--model`: Model to evaluate (default: 'claude-3-haiku-20240307').
+- `--model`: Model to evaluate.
 - `--topic`: Topic to generate content for.
 - `--api_key`: API key for the model.
 - `--api_url`: API key for the model.
