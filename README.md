@@ -58,7 +58,7 @@ python main.py --topic "LLMs for education"
                --rag_num 60
                --outline_reference_num 1500
                --db_path ./database
-               --embedding_model nomic-embed-text-v1
+               --embedding_model nomic-ai/nomic-embed-text-v1
                --api_url https://api.openai.com/v1/chat/completions
                --api_key sk-xxxxxx 
 ```
@@ -88,7 +88,7 @@ python main.py --topic "LLMs for education"
                --saving_path ./output/
                --model gpt-4o-2024-05-13
                --db_path ./database
-               --embedding_model nomic-embed-text-v1
+               --embedding_model nomic-ai/nomic-embed-text-v1
                --api_url https://api.openai.com/v1/chat/completions
                --api_key sk-xxxxxx 
 ```
