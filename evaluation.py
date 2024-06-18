@@ -20,7 +20,7 @@ def paras_args():
     parser.add_argument('--api_url',default='https://api.openai.com/v1/chat/completions', type=str, help='url for API request')
     parser.add_argument('--api_key',default='', type=str, help='API key for the model')
     parser.add_argument('--db_path',default='./database', type=str, help='Directory of the database.')
-    parser.add_argument('--embedding_model',default='nomic-embed-text-v1', type=str, help='Embedding model for retrieval.')
+    parser.add_argument('--embedding_model',default='nomic-ai/nomic-embed-text-v1', type=str, help='Embedding model for retrieval.')
     args = parser.parse_args()
 
     return args
