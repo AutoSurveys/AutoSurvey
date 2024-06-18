@@ -37,7 +37,7 @@ strate that AutoSurvey consistently achieves high citation and content quality s
    pip install -r requirements.txt
    ```
 
-3. Download the database (We provide a database containing 53,000 arXiv paper abstracts and all papers are under the CS category.):
+3. Download the database: (Here we provide a database containing 53,000 arXiv paper abstracts and all papers are under the CS category. You can contact [us](mailto:qguo@smail.nju.edu.cn) to obtain the database containing the full content of the papers. )
    https://1drv.ms/u/c/8761b6d10f143944/EaqWZ4_YMLJIjGsEB_qtoHsBoExJ8bdppyBc1uxgijfZBw?e=2EIzti
    ```sh
    unzip database.zip -d ./database/
