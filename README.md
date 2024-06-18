@@ -1,6 +1,6 @@
 # AutoSurvey
 <p align="center">
-   AutoSurvey: Large Language Models Can Automatically Write Surveys
+   <a href="https://arxiv.org/abs/2406.10252">AutoSurvey: Large Language Models Can Automatically Write Surveys</a>
 </p>
 <p align="center">
   <strong></strong><br>
@@ -15,6 +15,8 @@
 AutoSurvey is a speedy and well-organized framework for automating the creation of comprehensive literature surveys.
 
 ![Overview](figs/overview.png)
+Extensive experimental results across different survey lengths (8k, 16k, 32k, and 64k tokens) demon-
+strate that AutoSurvey consistently achieves high citation and content quality scores
 ![Overview](figs/main_fig.png)
 
 ## Requirements
@@ -36,30 +38,32 @@ AutoSurvey is a speedy and well-organized framework for automating the creation 
    ```
 
 3. Download the database (We provide a database containing 53,000 arXiv paper abstracts and all papers are under the CS category.):
+   https://1drv.ms/u/c/8761b6d10f143944/EaqWZ4_YMLJIjGsEB_qtoHsBoExJ8bdppyBc1uxgijfZBw?e=2EIzti
    ```sh
-   pip install -r requirements.txt
+   unzip database.zip -d ./database/
    ```
 
 ## Usage
 
 ### Generation
-Here is an example command to generate survey on the topic "In-context Learning":
+Here is an example command to generate survey on the topic "LLMs for education":
 
 ```sh
-python main.py --topic "In-context Learning" 
+python main.py --topic "LLMs for education" 
                --gpu 0
                --saving_path ./output/
-               --model gpt-4-0125-preview
+               --model gpt-4o-2024-05-13
                --section_num 7
                --subsection_len 700
                --rag_num 60
+               --outline_reference_num 1500
+               --db_path ./database
+               --embedding_model nomic-embed-text-v1
                --api_url https://api.openai.com/v1/chat/completions
                --api_key sk-xxxxxx 
 ```
 
 The generated content will be saved in the `./output/` directory.
-
-You can customize the arguments as needed:
 
 - `--gpu`: Specify the GPU to use.
 - `--saving_path`: Directory to save the output survey.
@@ -68,19 +72,24 @@ You can customize the arguments as needed:
 - `--section_num`: Number of sections in the outline.
 - `--subsection_len`: Length of each subsection.
 - `--rag_num`: Number of references to use for RAG.
+- `--outline_reference_num`: Number of references for outline generation.
+- `--db_path`: Directory of the database.
+- `--embedding_model`: Embedding model for retrieval.
 - `--api_key`: API key for the model.
 - `--api_url`: url for API request.
 
 ### Evaluation
 
-Here is an example command to evaluate the generated survey on the topic "In-context Learning":
+Here is an example command to evaluate the generated survey on the topic "LLMs for education":
 
 ```sh
-python main.py --topic "In-context Learning" 
+python main.py --topic "LLMs for education" 
                --gpu 0
                --saving_path ./output/
-               --model claude-3-haiku-20240307
-               --api_url xxxx
+               --model gpt-4o-2024-05-13
+               --db_path ./database
+               --embedding_model nomic-embed-text-v1
+               --api_url https://api.openai.com/v1/chat/completions
                --api_key sk-xxxxxx 
 ```
 
@@ -90,15 +99,17 @@ The evaluation result will be saved in the `./output/` directory.
 
 - `--gpu`: Specify the GPU to use (default: '0').
 - `--saving_path`: Directory to save the evaluation results (default: './output/').
-- `--model`: Model to evaluate.
-- `--topic`: Topic to generate content for.
+- `--model`: Model for evaluation.
+- `--topic`: Topic of generated survey.
+- `--db_path`: Directory of the database.
+- `--embedding_model`: Embedding model for retrieval.
 - `--api_key`: API key for the model.
-- `--api_url`: API key for the model.
+- `--api_url`: url for API request.
 
 ## Contributing
 
-Contributions are welcome! Please submit a pull request or open an issue to discuss what you would like to change.
+Contributions are welcome! Please open an issue to discuss what you would like to change.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.

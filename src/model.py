@@ -35,7 +35,26 @@ class APIModel:
                 except:
                     pass
             return None
-       
+    
+    # def req(self, text, temperature=1):
+    #     url = f"{self.__api_url}"
+    #     pay_load_dict = {"model": f"{self.model}","messages": [{
+    #             "role": "user",
+    #             "temperature":temperature,
+    #             "content": f"{text}"}]}
+    #     payload = json.dumps(pay_load_dict)
+    #     headers = {
+    #     'Accept': 'application/json',
+    #     'Authorization': f'Bearer {self.__api_key}',
+    #     'User-Agent': 'Apifox/1.0.0 (https://apifox.com)',
+    #     'Content-Type': 'application/json'
+    #     }
+        
+    #     response = requests.request("POST", url, headers=headers, data=payload)
+    #     print(response)
+    #     print(response.text)
+    #     return json.loads(response.text)['choices'][0]['message']['content']
+
     def chat(self, text, temperature=1):
         response = self.__req(text, temperature=temperature, max_try=5)
         return response
