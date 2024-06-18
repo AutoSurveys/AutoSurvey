@@ -136,6 +136,7 @@ Under each section, there are several subsections.
 Each subsection also follows with a brief sentence of descripition.
 Some of the subsections may be repeated or overlaped.
 You need to modify the outline to make it both comprehensive and logically coherent with no repeated subsections.
+Repeated subsections among sections are not allowed!
 Return the final outline in the format:
 <format>
 # [TITLE OF SURVEY]
@@ -270,7 +271,7 @@ Subsection to Refine:
 If the content of Previous Subsection is empty, it means that the subsection to refine is the first subsection.
 If the content of Following Subsection is empty, it means that the subsection to refine is the last subsection.
 
-Now refine the subsection to enhance coherence, and ensure that it connects more fluidly with the previous and following subsections. 
+Now refine the subsection to enhance coherence, and ensure that the content of the subsection flow more smoothly with the previous and following subsections. 
 
 Remember that keep all the essence and core information of the subsection intact. Do not modify any citations in [] following the sentences.
 
