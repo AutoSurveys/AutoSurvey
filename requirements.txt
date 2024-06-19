@@ -1,6 +1,8 @@
 faiss_gpu==1.7.2
 h5py==3.7.0
 langchain==0.2.3
+langchain-community==0.2.5
+einops==0.8.0
 numpy==1.23.5
 Requests==2.32.3
 sentence_transformers==2.7.0

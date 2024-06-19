@@ -7,7 +7,6 @@ from src.agents.judge import Judge
 from src.database import database
 from tqdm import tqdm
 import time
-import gradio as gr
 
 def remove_descriptions(text):
     lines = text.split('\n')
