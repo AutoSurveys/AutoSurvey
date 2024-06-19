@@ -1,6 +1,6 @@
 faiss_gpu==1.7.2
 h5py==3.7.0
-langchain==0.2.3
+langchain==0.2.5
 langchain-community==0.2.5
 einops==0.8.0
 numpy==1.23.5
