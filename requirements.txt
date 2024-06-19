@@ -1,5 +1,4 @@
 faiss_gpu==1.7.2
-gradio==4.36.1
 h5py==3.7.0
 langchain==0.2.3
 numpy==1.23.5
