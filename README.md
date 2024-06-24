@@ -19,6 +19,10 @@ Extensive experimental results across different survey lengths (8k, 16k, 32k, an
 strate that AutoSurvey consistently achieves high citation and content quality scores
 ![Overview](figs/main_fig.png)
 
+## Web Demo
+You can also access our [web demo](https://green-views-wash.loca.lt/) to generate surveys.
+(localtunnel password: 47.236.10.43)
+
 ## Requirements
 
 - Python 3.10.x
