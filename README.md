@@ -21,7 +21,7 @@ strate that AutoSurvey consistently achieves high citation and content quality s
 
 ## Web Demo
 You can also access our [web demo](https://tough-bananas-hunt.loca.lt) to generate surveys.
-(Tunnel Password: 47.236.10.43, accessible from Monday to Friday)
+(Tunnel Password: 47.236.10.43)
 
 ## Requirements
 
