@@ -23,6 +23,8 @@ strate that AutoSurvey consistently achieves high citation and content quality s
 You can also access our [web demo](https://autosurvey.loca.lt) to generate surveys.
 (Tunnel Password: 47.236.10.43)
 
+**Note: Our web demo is currently under maintenance and is expected to be unavailable for one day. Thank you for your patience.**
+
 ## Requirements
 
 - Python 3.10.x
