@@ -23,7 +23,9 @@ strate that AutoSurvey consistently achieves high citation and content quality s
 You can also access our [web demo](https://autosurvey.loca.lt) to generate surveys.
 (Tunnel Password: 47.236.10.43)
 
-**Note: Our web demo is currently under maintenance and is expected to be unavailable for one day. Thank you for your patience.**
+**News**: 
+   1. We have added registration and login features.
+   2. Generation based on **personalized user requirements** are supported (optional)!!
 
 ## Requirements
 
