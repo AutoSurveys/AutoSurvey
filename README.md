@@ -27,6 +27,8 @@ You can also access our [web demo](https://autosurvey.loca.lt) to generate surve
    1. We have added registration and login features.
    2. Generation based on **personalized user requirements** are supported (optional)!!
 
+If you encounter a "Service Unavailable" error, it is usually due to an issue with the local tunnel server. Please be patient and wait for the [local tunnel team](https://github.com/localtunnel/localtunnel) to resolve it.
+
 ## Requirements
 
 - Python 3.10.x
