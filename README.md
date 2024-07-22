@@ -20,14 +20,12 @@ strate that AutoSurvey consistently achieves high citation and content quality s
 ![Overview](figs/main_fig.png)
 
 ## Web Demo
-You can also access our [web demo](https://autosurvey.loca.lt) to generate surveys. **The web is currently under maintenance and is expected to be back online in a day.**
-(Tunnel Password: **8.219.215.3**)
+You can also access our [web demo](https://autosurvey.loca.lt) to generate surveys.
+(Tunnel Password: **124.160.102.80**)
 
 **News**: 
-   1. We have added registration and login features.
-   2. Generation based on **personalized user requirements** are supported (optional)!!
-
-If you encounter a "Service Unavailable" error, it is usually due to an issue with the local tunnel server. Please be patient and wait for the [local tunnel team](https://github.com/localtunnel/localtunnel) to resolve it.
+   1. Generation based on **personalized user requirements** are supported (optional)!!
+   2. To reduce costs, we have replaced claude-haiku with gpt-4o-mini. Any feedback is welcome. 
 
 ## Requirements
 
