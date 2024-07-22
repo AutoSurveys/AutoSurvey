@@ -25,7 +25,6 @@ You can also access our [web demo](https://autosurvey.loca.lt) to generate surve
 
 **News**: 
    1. Generation based on **personalized user requirements** are supported (optional)!!
-   2. To reduce costs, we have replaced claude-haiku with gpt-4o-mini. Any feedback is welcome. 
 
 ## Requirements
 
