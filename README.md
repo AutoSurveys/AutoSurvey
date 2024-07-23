@@ -21,6 +21,7 @@ strate that AutoSurvey consistently achieves high citation and content quality s
 
 ## Web Demo
 You can also access our [web demo](https://autosurvey.serveo.net/) to generate surveys.
+(The firewall might prompt a risk warning, but you can ignore it.)
 
 **News**: 
    1. Generation based on **personalized user requirements** are supported (optional)!!
