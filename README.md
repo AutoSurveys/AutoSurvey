@@ -20,8 +20,7 @@ strate that AutoSurvey consistently achieves high citation and content quality s
 ![Overview](figs/main_fig.png)
 
 ## Web Demo
-You can also access our [web demo](https://autosurvey.loca.lt) to generate surveys.
-(Tunnel Password: **124.160.102.80**)
+You can also access our [web demo](https://autosurvey.serveo.net/) to generate surveys.
 
 **News**: 
    1. Generation based on **personalized user requirements** are supported (optional)!!
