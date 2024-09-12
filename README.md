@@ -43,7 +43,7 @@ You can also access our [web demo](https://autosurvey.serveo.net/) to generate s
    pip install -r requirements.txt
    ```
 
-3. Download the database: (Here we provide a database containing 53,000 arXiv paper abstracts and all papers are under the CS category. You can contact [us](mailto:qguo@smail.nju.edu.cn) to obtain the database containing the full content of the papers. )
+3. Download the database: (Here we provide a database containing 530,000 arXiv paper abstracts and all papers are under the CS category. You can contact [us](mailto:qguo@smail.nju.edu.cn) to obtain the database containing the full content of the papers. )
    https://1drv.ms/u/c/8761b6d10f143944/EaqWZ4_YMLJIjGsEB_qtoHsBoExJ8bdppyBc1uxgijfZBw?e=2EIzti
    ```sh
    unzip database.zip -d ./database/
