@@ -89,7 +89,7 @@ The generated content will be saved in the `./output/` directory.
 Here is an example command to evaluate the generated survey on the topic "LLMs for education":
 
 ```sh
-python evaluate.py --topic "LLMs for education" 
+python evaluation.py --topic "LLMs for education" 
                --gpu 0
                --saving_path ./output/
                --model gpt-4o-2024-05-13
