@@ -1,4 +1,4 @@
-# AutoSurvey
+# AutoSurvey (NeurIPS 2024)
 <p align="center">
    <a href="https://arxiv.org/abs/2406.10252">AutoSurvey: Large Language Models Can Automatically Write Surveys</a>
 </p>
@@ -111,6 +111,20 @@ The evaluation result will be saved in the `./output/` directory.
 - `--embedding_model`: Embedding model for retrieval.
 - `--api_key`: API key for the model.
 - `--api_url`: url for API request.
+
+## Citing Autosurvey
+
+Please cite us if you fine this project helpful for your project/paper:
+
+```
+@inproceedings{
+2024autosurvey,
+title={AutoSurvey: Large Language Models Can Automatically Write Surveys},
+author = {Wang, Yidong and Guo, Qi and Yao, Wenjin and Zhang, Hongbo and Zhang, xin and Wu, Zhen and Zhang, Meishan and Dai, Xinyu and Zhang, Min and Wen, Qingsong and Ye, Wei and Zhang, Shikun and Zhang, Yue},
+booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+year={2024}
+}
+```
 
 ## Contributing
 
