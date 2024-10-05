@@ -114,7 +114,7 @@ The evaluation result will be saved in the `./output/` directory.
 
 ## Citing Autosurvey
 
-Please cite us if you fine this project helpful for your project/paper:
+Please cite us if you find this project helpful for your project/paper:
 
 ```
 @inproceedings{
