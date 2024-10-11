@@ -295,7 +295,7 @@ class outlineWriter():
             title_chunks.append(titles[start:point])
             start = point
         paper_chunks.append(papers[start:])
-        title_chunks.append(papers[start:])
+        title_chunks.append(titles[start:])
         return paper_chunks, title_chunks
        
     def process_outlines(self, section_outline, sub_outlines):
