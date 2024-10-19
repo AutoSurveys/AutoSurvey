@@ -120,7 +120,7 @@ Please cite us if you find this project helpful for your project/paper:
 @inproceedings{
 2024autosurvey,
 title={AutoSurvey: Large Language Models Can Automatically Write Surveys},
-author = {Wang, Yidong and Guo, Qi and Yao, Wenjin and Zhang, Hongbo and Zhang, xin and Wu, Zhen and Zhang, Meishan and Dai, Xinyu and Zhang, Min and Wen, Qingsong and Ye, Wei and Zhang, Shikun and Zhang, Yue},
+author = {Wang, Yidong and Guo, Qi and Yao, Wenjin and Zhang, Hongbo and Zhang, Xin and Wu, Zhen and Zhang, Meishan and Dai, Xinyu and Zhang, Min and Wen, Qingsong and Ye, Wei and Zhang, Shikun and Zhang, Yue},
 booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
 year={2024}
 }
