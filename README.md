@@ -19,11 +19,6 @@ Extensive experimental results across different survey lengths (8k, 16k, 32k, an
 strate that AutoSurvey consistently achieves high citation and content quality scores
 ![Overview](figs/main_fig.png)
 
-## Web Demo
-You can also access our [web demo](http://47.236.242.17:8271/)to generate surveys.
-
-**News**: 
-   1. Generation based on **personalized user requirements** are supported (optional)!!
 
 ## Requirements
 
