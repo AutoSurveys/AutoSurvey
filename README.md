@@ -112,6 +112,13 @@ The evaluation result will be saved in the `./output/` directory.
 Please cite us if you find this project helpful for your project/paper:
 
 ```
+@article{wang2024autosurvey,
+  title={AutoSurvey: Large Language Models Can Automatically Write Surveys},
+  author={Wang, Yidong and Guo, Qi and Yao, Wenjin and Zhang, Hongbo and Zhang, Xin and Wu, Zhen and Zhang, Meishan and Dai, Xinyu and Zhang, Min and Wen, Qingsong and others},
+  journal={arXiv preprint arXiv:2406.10252},
+  year={2024}
+}
+
 @inproceedings{
 2024autosurvey,
 title={AutoSurvey: Large Language Models Can Automatically Write Surveys},
